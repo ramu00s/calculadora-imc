@@ -1,17 +1,24 @@
-function caculateImc(){
-    //Aqui irei pegar os valores dos campos de Input
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value);
+function calculateImc(){
+    //Aqui irei pegar os valores dos campos de Input além disso irei substituir as vírgulas por pontos
+    let weight = document.getElementById('weight').value || "";  // Garante que weight seja uma string
+    let height = document.getElementById('height').value || "";  // Garante que height seja uma string
 
-    //Verificação se os valores são válidos
-    if (isNaN(weight) || isNaN(height)){
-        document.getElementById('result').textContent = "Por favor, insira valores válidos!";
-        return;
+    //Substitui a vírgula por ponto
+    weight = weight.replace(",", ".");
+    height = height.replace(",", ".");
+
+    //Converte os valores para números e realiza o cálculo
+    weight = parseFloat(weight);
+    height = parseFloat(height);
+
+    //Onde será calculado o valor do IMC e a mensagem que será exibida para o usuário
+    if (!isNaN(weight) && !isNaN(height) && height > 0) {
+        let imc = weight / (height * height);
+        // Mensagem explicativa
+        let mensagem = `Seu IMC é <strong>${imc.toFixed(2)}</strong>.`;
+        
+        document.getElementById("result").innerHTML = mensagem;
+    } else {
+        document.getElementById("result").innerHTML = "Insira valores válidos para o cálculo.";
     }
-
-    //Onde será calculado o IMC
-    const imc = weight / (height * height);
-
-    //Exiba o resultado no parágrafo com id "result"
-    document.getElementById('result').textContent = `O seu IMC é ${imc.toFixed(2)}`;
 }
