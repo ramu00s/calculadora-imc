@@ -16,3 +16,40 @@ p{
     font-size: 12px;
     padding: 4px;
 }
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Espaçamento em torno da tabela */
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%; /* Ajusta a largura da tabela para 100% da tela */
+    max-width: 800px; /* Limita a largura máxima da tabela em telas grandes */
+    text-align: left;
+    margin: 0 auto;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.table td {
+    background-color: #84bfff;
+}
+
+.table th {
+    background-color: #007bff;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 600px) {
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px; /* Ajuste do tamanho da fonte para telas menores */
+    }
+}
