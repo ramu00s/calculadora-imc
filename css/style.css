@@ -55,12 +55,12 @@ p{
 }
 
 .highlight {
-    background-color: #00ff8c !important;  /* Usei !important para garantir que as alterações do CSS tenha prioridade sobre o Bootstrap */
+    background-color: #198754 !important;  /* Usei !important para garantir que as alterações do CSS tenha prioridade sobre o Bootstrap */
     font-weight: bold;
     color: #000 !important;
 }
 
 .highlight td {
-    background-color: #00ff8c !important; /* Força a cor de fundo nas células */
+    background-color: #198754 !important; /* Força a cor de fundo nas células */
     color: #000;
 }

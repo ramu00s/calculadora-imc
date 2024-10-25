@@ -1,3 +1,19 @@
+//Função para validar a entrada e exibir mensagem se houver caracteres inválidos
+function validateInput(event){
+    const input = event.target
+    const validValue = input.value.replace(/[^0-9.,]/g,''); //Permite apenas números, pontos e vírgulas
+
+    if (input.value != validValue){
+        //Se houver caracteres inválidos, exibe a mensagem e limpa o campo
+        document.getElementById("result").innerHTML = "Insira valores válidos para o cálculo."
+        input.value = validValue; //Remove os caracteres inválidos
+    }
+}
+
+//Adicionar o evento input dos campos de peso e altura
+document.getElementById('weight').addEventListener('input', validateInput);
+document.getElementById('height').addEventListener('input', validateInput);
+
 function calculateImc(){
     //Aqui irei pegar os valores dos campos de Input além disso irei substituir as vírgulas por pontos
     let weight = document.getElementById('weight').value || "";  // Garante que weight seja uma string
