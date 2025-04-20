@@ -1,66 +1,42 @@
-h1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 60px;
-    color: #ffffff;
-    padding: 20px;
-}
-
-div{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    padding: 5px;
-}
-
-p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-    padding: 4px;
-}
-
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px; /* Espaçamento em torno da tabela */
-}
-
-.table {
-    border-collapse: collapse;
-    width: 100%; /* Ajusta a largura da tabela para 100% da tela */
-    max-width: 800px; /* Limita a largura máxima da tabela em telas grandes */
-    text-align: left;
-    margin: 0 auto;
-}
-
-.table th, .table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-}
-
-.table td {
-    background-color: #84bfff;
-}
-
-.table th {
-    background-color: #007bff;
-}
-
-/* Estilos para telas menores */
-@media (max-width: 600px) {
-    .table th, .table td {
-        padding: 8px;
-        font-size: 14px; /* Ajuste do tamanho da fonte para telas menores */
-    }
-}
-
-.highlight {
-    background-color: #198754 !important;  /* Usei !important para garantir que as alterações do CSS tenha prioridade sobre o Bootstrap */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  h1 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .table td {
+    background-color: #e3f0ff;
+  }
+  
+  .highlight {
+    background-color: #198754 !important;
     font-weight: bold;
     color: #000 !important;
-}
-
-.highlight td {
-    background-color: #198754 !important; /* Força a cor de fundo nas células */
+  }
+  
+  .highlight td {
+    background-color: #198754 !important;
     color: #000;
-}
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .form-label {
+      font-size: 0.95rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  
+    #result {
+      font-size: 1rem;
+    }
+  }  
